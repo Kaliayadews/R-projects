@@ -150,3 +150,60 @@ scatter_plot_sizecolor <- ggplot(
  ggsave("scatter_plot_sizecolor.png", plot = scatter_plot, width = 8, height = 5)
  
 ```
+
+Step 3: Anaylsis
+
+```{r}
+#1. What species has the highest body mass?
+#Below we observe that Gentoo Penguin has the highest average body mass across all species, at 5092 grams. Gentoo Penguin have the highest median body mass as well at 5050 grams. 
+
+summary_stats <- clean_penguins %>%
+  group_by(species) %>%
+  summarize(avg_mass = mean(body_mass_g, na.rm = TRUE)) %>%
+  arrange(desc(avg_mass))
+print(summary_stats)
+
+clean_penguins %>%
+  group_by(species) %>%
+  summarize(median_mass = median(body_mass_g, na.rm = TRUE)) %>%
+  arrange(desc(median_mass))
+
+
+
+#2. Are those species women or men?
+#We see Gentoo Penguin have the highest body mass no matter what the sex is. The next is Adelie males then Chinstrap males. So we can see males usually have the highest body mass in all species. 
+
+summary_stats_sex <- clean_penguins %>%
+  group_by(species, sex) %>%
+  summarize(avg_mass = mean(body_mass_g, na.rm = TRUE)) %>%
+  arrange(desc(avg_mass))
+print(summary_stats_sex)
+
+
+
+#3. Are there any interesting trends by sex?
+#An interesting trend is that among the penguins labeled 'heavy' the male Chinestrap Penguins have the largest bill length.
+
+bill_length_summary <- clean_penguins %>%
+    filter(body_mass_label == "Heavy") %>%
+  group_by(species, sex) %>%
+  summarize(avg_bill_length = mean(bill_length_mm),
+            .groups = "drop") %>%
+  arrange(desc(avg_bill_length))
+
+print(bill_length_summary)
+
+
+#Lets look at all penguins - with the body mass label of 'Heavy' and 'Light'. 
+#We observe that Chinestrap males have the largest bill length no matter their body mass. 
+
+bill_trend <- clean_penguins %>%
+  group_by(species, sex, body_mass_label) %>%
+  summarize(avg_bill_length = mean(bill_length_mm), 
+            .groups = "drop") %>%
+  arrange(desc(avg_bill_length))
+
+print(bill_trend)
+
+
+```
