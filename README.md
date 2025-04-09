@@ -12,6 +12,10 @@ This project showscases data wrangling and visualization skills in R using the `
   - Scatterplot showing relationship between body mass and flipper length
   - Faceted plots by sex
 
+## Notable Trend
+
+When filtering for penguins labeled as "Heavy" (above-median body mass within their species and sex), I found that the male Chinstrap penguins had the longest average bill length. Across species, heavier males tended to have longer bills than their lighter or female counterparts.
+
 ## Tools & Packages
 - dplyr
 - ggplot2
