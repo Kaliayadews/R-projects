@@ -19,6 +19,6 @@ This project showscases data wrangling and visualization skills in R using the `
 - stringr
 
 ## Visual Examples
-See the `plots/` folder for chart examples.
+See the `plots/` folder for charts.
 
 
