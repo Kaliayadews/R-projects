@@ -1,6 +1,7 @@
 # Penguin Data Visualization (R Project)
 
-This project showscases data wrangling and visualization skills in R using the `palmerpenguins` dataset. 
+This project showcases data wrangling and visualization skills in R using the `palmerpenguins` dataset. 
+While highlighting data wrangling and trend analysis techniques often used in exploratory business or financial data projects.
 
 ## What the Code Does
 
@@ -9,7 +10,7 @@ This project showscases data wrangling and visualization skills in R using the `
 - Creates visualizations:
   - Bar chart by species and sex
   - Boxplot of body mass
-  - Scatterplot showing relationship between body mass and flipper length
+  - Scatterplot showing the relationship between body mass and flipper length
   - Faceted plots by sex
 
 ## Notable Trend
