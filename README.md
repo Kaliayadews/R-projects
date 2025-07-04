@@ -24,6 +24,10 @@ When filtering for penguins labeled as "Heavy" (above-median body mass within th
 - stringr
 
 ## Visual Examples
-See the `plots/` folder for charts.
+[Click here to view the Penguin count by species and gender bar chart](https://github.com/Kaliayadews/R-projects/blob/main/plots/bar_plot_flipper_species.png)
+[Click here to view the flipper length and body mass scatter plot](https://github.com/Kaliayadews/R-projects/blob/main/plots/scatter_plot.png)
+
+
+See more charts in the `plots/` folder.
 
 
